@@ -11,7 +11,7 @@ import { environment } from '../environments/environment';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('curvaS');
+  protected readonly title = signal('Relatório Técnico');
   readonly theme = signal<'dark' | 'light'>('dark');
   readonly isLoggedIn = signal(false);
   readonly password = signal('');

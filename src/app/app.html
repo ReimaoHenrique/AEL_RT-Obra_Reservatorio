@@ -1,0 +1,61 @@
+<div class="login-screen" *ngIf="!isLoggedIn()">
+  <button type="button" class="theme-toggle login-theme-toggle" (click)="toggleTheme()" [title]="theme() === 'dark' ? 'Mudar para claro' : 'Mudar para escuro'">
+    <svg *ngIf="theme() === 'dark'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg *ngIf="theme() === 'light'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+
+  <div class="login-card">
+    <div class="login-brand">
+      <img src="/logo.svg" alt="Company Logo" class="login-logo">
+      <div class="brand-divider"></div>
+      <span class="brand-name">Nós construímos</span>
+    </div>
+
+    <div class="login-header">
+      <h2>Bem-vindo</h2>
+      <p>Acesse o portal de relatórios técnicos</p>
+    </div>
+
+    <div class="login-form">
+      <div class="input-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <input
+          type="password"
+          placeholder="Chave de acesso (Hash)"
+          (input)="onPasswordInput($event)"
+          (keydown.enter)="login()"
+        >
+      </div>
+      <button class="btn-login" (click)="login()">
+        <span>Entrar no Sistema</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+
+    <div class="login-footer">
+      <p>&copy; 2026 Portal de Engenharia Civil</p>
+    </div>
+  </div>
+</div>
+
+<div class="app-shell" *ngIf="isLoggedIn()">
+  <header class="app-hero">
+    <div class="hero-header">
+      <img src="/logo.svg" alt="Logo" class="mini-logo">
+      <p class="eyebrow">Relatório técnico</p>
+    </div>
+    <h1>{{ title() }} · Curva S do planejamento de obra</h1>
+    <p class="lede">
+      Os gráficos abaixo refletem o progresso planejado versus o realizado extraído do arquivo
+      <strong>PLANEJAMENTO DE OBRA_rev.01.xlsx</strong>. Eles servem de base para o documento final do
+      relatório técnico.
+    </p>
+    <button type="button" class="theme-toggle" (click)="toggleTheme()" [title]="theme() === 'dark' ? 'Mudar para claro' : 'Mudar para escuro'">
+      <svg *ngIf="theme() === 'dark'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg *ngIf="theme() === 'light'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <span>Visual {{ theme() === 'dark' ? 'Escuro' : 'Claro' }}</span>
+    </button>
+  </header>
+
+  <app-curva-s [theme]="theme()" />
+</div>

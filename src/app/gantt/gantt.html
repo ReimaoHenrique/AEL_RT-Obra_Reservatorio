@@ -1,0 +1,51 @@
+<section class="gantt-panel">
+  <header class="panel-header">
+    <div>
+      <p class="eyebrow">Cronograma</p>
+      <h2>Gráfico de Gantt</h2>
+      <p class="subline">
+        Acompanhamento das fases da obra no tempo. Barras indicam o período planejado; a cor reflete o status
+        (em dia, em atraso ou atrasado).
+      </p>
+    </div>
+    <div class="legenda">
+      <span class="legenda-item" *ngFor="let s of legendaStatuses">
+        <i class="legenda-quadro" [style.background]="getStatusColor(s)"></i>
+        {{ statusLabel[s] }}
+      </span>
+    </div>
+  </header>
+
+  <div class="gantt-layout">
+    <div class="tabela-wrapper">
+      <table class="gantt-tabela">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Duração</th>
+            <th>Início real</th>
+            <th>Fim real</th>
+            <th>Percentual</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of tasksList" [attr.data-status]="t.status">
+            <td>{{ t.descricao }}</td>
+            <td>{{ t.duracao }} d</td>
+            <td>{{ t.inicioReal }}</td>
+            <td>{{ t.fimReal }}</td>
+            <td>{{ t.percentual }}%</td>
+            <td>
+              <i class="status-dot" [style.background]="getStatusColor(t.status)"></i>
+              {{ statusLabel[t.status] }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-wrapper">
+      <canvas #ganttCanvas aria-label="Gráfico de Gantt do cronograma" role="img"></canvas>
+    </div>
+  </div>
+</section>

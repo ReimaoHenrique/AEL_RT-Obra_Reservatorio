@@ -1,12 +1,13 @@
 import { Component, signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurvaS } from './curva-s/curva-s';
+import { Gantt } from './gantt/gantt';
 import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CurvaS, CommonModule],
+  imports: [CurvaS, Gantt, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

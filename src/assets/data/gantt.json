@@ -1,0 +1,122 @@
+[
+  {
+    "descricao": "Projeto executivo",
+    "duracao": 30,
+    "inicioReal": "01/02/2025",
+    "fimReal": "28/02/2025",
+    "percentual": 100,
+    "status": "em_dia",
+    "startMonth": 0,
+    "endMonth": 0
+  },
+  {
+    "descricao": "Serviços preliminares",
+    "duracao": 45,
+    "inicioReal": "01/03/2025",
+    "fimReal": "15/04/2025",
+    "percentual": 100,
+    "status": "em_dia",
+    "startMonth": 1,
+    "endMonth": 2
+  },
+  {
+    "descricao": "Topografia",
+    "duracao": 15,
+    "inicioReal": "10/03/2025",
+    "fimReal": "25/03/2025",
+    "percentual": 100,
+    "status": "em_dia",
+    "startMonth": 1,
+    "endMonth": 1
+  },
+  {
+    "descricao": "Mobilização do canteiro",
+    "duracao": 20,
+    "inicioReal": "01/03/2025",
+    "fimReal": "20/03/2025",
+    "percentual": 100,
+    "status": "em_dia",
+    "startMonth": 1,
+    "endMonth": 1
+  },
+  {
+    "descricao": "Fundações",
+    "duracao": 60,
+    "inicioReal": "01/04/2025",
+    "fimReal": "30/05/2025",
+    "percentual": 85,
+    "status": "em_atraso",
+    "startMonth": 2,
+    "endMonth": 3
+  },
+  {
+    "descricao": "Estrutura",
+    "duracao": 45,
+    "inicioReal": "15/05/2025",
+    "fimReal": "30/06/2025",
+    "percentual": 40,
+    "status": "em_atraso",
+    "startMonth": 3,
+    "endMonth": 4
+  },
+  {
+    "descricao": "Alvenaria",
+    "duracao": 50,
+    "inicioReal": "01/06/2025",
+    "fimReal": "20/07/2025",
+    "percentual": 20,
+    "status": "em_dia",
+    "startMonth": 4,
+    "endMonth": 5
+  },
+  {
+    "descricao": "Cobertura",
+    "duracao": 30,
+    "inicioReal": "01/07/2025",
+    "fimReal": "30/07/2025",
+    "percentual": 0,
+    "status": "em_dia",
+    "startMonth": 5,
+    "endMonth": 5
+  },
+  {
+    "descricao": "Instalações",
+    "duracao": 45,
+    "inicioReal": "15/07/2025",
+    "fimReal": "30/08/2025",
+    "percentual": 0,
+    "status": "em_dia",
+    "startMonth": 5,
+    "endMonth": 6
+  },
+  {
+    "descricao": "Acabamentos",
+    "duracao": 40,
+    "inicioReal": "01/08/2025",
+    "fimReal": "10/09/2025",
+    "percentual": 0,
+    "status": "em_dia",
+    "startMonth": 6,
+    "endMonth": 7
+  },
+  {
+    "descricao": "Testes",
+    "duracao": 15,
+    "inicioReal": "05/09/2025",
+    "fimReal": "20/09/2025",
+    "percentual": 0,
+    "status": "em_dia",
+    "startMonth": 7,
+    "endMonth": 7
+  },
+  {
+    "descricao": "Entrega",
+    "duracao": 5,
+    "inicioReal": "25/09/2025",
+    "fimReal": "30/09/2025",
+    "percentual": 0,
+    "status": "em_dia",
+    "startMonth": 7,
+    "endMonth": 7
+  }
+]

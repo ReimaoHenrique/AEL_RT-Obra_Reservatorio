@@ -3,10 +3,13 @@ import {
   Component,
   effect,
   ElementRef,
+  inject,
   input,
+  signal,
   ViewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Chart, ChartConfiguration } from 'chart.js/auto';
 
 export type GanttStatus = 'atrasado' | 'em_atraso' | 'em_dia';
@@ -35,12 +38,14 @@ const STATUS_COLORS: Record<GanttStatus, string> = {
 @Component({
   selector: 'app-gantt',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './gantt.html',
   styleUrl: './gantt.css',
 })
 export class Gantt implements AfterViewInit {
+  private readonly http = inject(HttpClient);
   private chart: Chart<'bar'> | null = null;
+  private readonly dataStore = signal<GanttTask[] | null>(null);
 
   @ViewChild('ganttCanvas', { static: true })
   private canvas!: ElementRef<HTMLCanvasElement>;
@@ -70,17 +75,29 @@ export class Gantt implements AfterViewInit {
     effect(() => {
       this.theme();
       this.tasks();
+      this.dataStore();
       if (this.chart) this.renderChart();
     });
   }
 
   ngAfterViewInit(): void {
-    this.renderChart();
+    this.http.get<GanttTask[]>('/assets/data/gantt.json').subscribe({
+      next: (tasks) => {
+        this.dataStore.set(tasks);
+        this.renderChart();
+      },
+      error: () => {
+        this.dataStore.set(this.getDefaultTasks());
+        this.renderChart();
+      },
+    });
   }
 
   private getTasks(): GanttTask[] {
     const t = this.tasks();
     if (t.length) return t;
+    const loaded = this.dataStore();
+    if (loaded?.length) return loaded;
     return this.getDefaultTasks();
   }
 

@@ -1,0 +1,223 @@
+:host {
+  display: block;
+}
+
+.evolucao-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  color: var(--text-color);
+  backdrop-filter: blur(16px);
+  transition: all var(--transition);
+  margin-bottom: 2rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.panel-header h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  margin: 0.25rem 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.panel-header .subline {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted-color);
+  line-height: 1.5;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+  margin: 0;
+  font-weight: 600;
+}
+
+.revisao {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted-color);
+  white-space: nowrap;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.evolucao-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+/* Larguras mínimas via colgroup para alinhamento consistente */
+.evolucao-tabela .col-item { width: 5.5rem; }
+.evolucao-tabela .col-descricao { width: 18rem; }
+.evolucao-tabela .col-und { width: 3.25rem; }
+.evolucao-tabela .col-qtd { width: 4rem; }
+.evolucao-tabela .col-unit { width: 5.5rem; }
+.evolucao-tabela .col-total { width: 7rem; }
+.evolucao-tabela .col-pct { width: 3rem; }
+.evolucao-tabela .col-rs { width: 5.5rem; }
+
+.evolucao-tabela th,
+.evolucao-tabela td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+/* Cabeçalho: azul escuro com texto branco */
+.evolucao-tabela thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.evolucao-tabela thead tr.header-row-main th {
+  background: #1e3a5f;
+  color: #fff;
+  border-bottom: 1px solid #2c5282;
+  font-size: 0.75rem;
+  padding: 0.55rem 0.6rem;
+}
+
+.evolucao-tabela thead tr.subhead th {
+  background: #2c5282;
+  color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.6875rem;
+  padding: 0.25rem 0.6rem 0.5rem;
+}
+
+.evolucao-tabela thead tr.subhead th:nth-child(n+7) {
+  text-align: center;
+}
+
+/* Célula de descrição: quebra de linha e leitura */
+.evolucao-tabela .td-descricao {
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  min-width: 10rem;
+  line-height: 1.5;
+  padding-right: 0.75rem;
+}
+
+.evolucao-tabela .td-item {
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.evolucao-tabela .td-und {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.evolucao-tabela tbody tr:hover {
+  background: var(--hover-bg, rgba(255, 255, 255, 0.03));
+}
+
+[data-theme='light'] .evolucao-tabela tbody tr:hover {
+  background: var(--hover-bg, rgba(0, 0, 0, 0.02));
+}
+
+.evolucao-tabela td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.evolucao-tabela td.num-empty {
+  text-align: right;
+  color: transparent;
+  user-select: none;
+}
+
+.evolucao-tabela .row-item td:nth-child(4),
+.evolucao-tabela .row-item td:nth-child(5),
+.evolucao-tabela .row-item td:nth-child(6),
+.evolucao-tabela .row-item td:nth-child(7),
+.evolucao-tabela .row-item td:nth-child(8),
+.evolucao-tabela .row-item td:nth-child(9),
+.evolucao-tabela .row-item td:nth-child(10) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.evolucao-tabela .row-categoria td,
+.evolucao-tabela .row-total td,
+.evolucao-tabela .row-percentual td {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Linhas de categoria: fundo azul, texto branco */
+.evolucao-tabela .row-categoria {
+  background: #2c5282;
+  color: #fff;
+}
+
+.evolucao-tabela .row-categoria .td-descricao,
+.evolucao-tabela .row-categoria .num {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Total e percentual: azul escuro, texto branco */
+.evolucao-tabela .row-total,
+.evolucao-tabela .row-percentual {
+  font-weight: 600;
+  background: #1e3a5f;
+  color: #fff;
+  border-top: 2px solid #2c5282;
+}
+
+.evolucao-tabela .row-total td,
+.evolucao-tabela .row-percentual td {
+  padding: 0.6rem 0.6rem;
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.evolucao-tabela .row-total .td-descricao,
+.evolucao-tabela .row-total .num,
+.evolucao-tabela .row-percentual .td-descricao,
+.evolucao-tabela .row-percentual .num {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .evolucao-panel {
+    padding: 1.25rem;
+  }
+
+  .evolucao-tabela {
+    font-size: 0.75rem;
+  }
+
+  .evolucao-tabela th,
+  .evolucao-tabela td {
+    padding: 0.4rem 0.5rem;
+  }
+}

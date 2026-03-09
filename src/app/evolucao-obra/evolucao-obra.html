@@ -1,0 +1,92 @@
+<section class="evolucao-panel" *ngIf="data() as d">
+  <header class="panel-header">
+    <div>
+      <p class="eyebrow">Custos e progresso</p>
+      <h2>Evolução da Obra</h2>
+      <p class="subline">
+        Custos diretos e acompanhamento do progresso por item nas datas de referência.
+      </p>
+    </div>
+    <span class="revisao">REV.{{ d.revisao }}</span>
+  </header>
+
+  <div class="table-wrapper">
+    <table class="evolucao-tabela">
+      <colgroup>
+        <col class="col-item">
+        <col class="col-descricao">
+        <col class="col-und">
+        <col class="col-qtd">
+        <col class="col-unit">
+        <col class="col-total">
+        <col class="col-pct">
+        <col class="col-rs">
+        <col class="col-pct">
+        <col class="col-rs">
+      </colgroup>
+      <thead>
+        <tr class="header-row-main">
+          <th>ITEM</th>
+          <th>DESCRIÇÃO</th>
+          <th>UND.</th>
+          <th [attr.colspan]="3">CUSTOS DIRETOS</th>
+          <th [attr.colspan]="2">{{ d.dataRef1 }}</th>
+          <th [attr.colspan]="2">{{ d.dataRef2 }}</th>
+        </tr>
+        <tr class="subhead">
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>QTD.</th>
+          <th>R$ UNIT.</th>
+          <th>R$</th>
+          <th>%</th>
+          <th>R$</th>
+          <th>%</th>
+          <th>R$</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let l of d.linhas">
+          <!-- Linha de item -->
+          <tr *ngIf="isItem(l)" class="row-item">
+            <td class="td-item">{{ l.item }}</td>
+            <td class="td-descricao">{{ l.descricao }}</td>
+            <td class="td-und">{{ l.und }}</td>
+            <td>{{ formatQtd(l.qtd) }}</td>
+            <td>{{ formatBr(l.valorUnitario) }}</td>
+            <td>{{ formatBr(l.custoDiretoTotal) }}</td>
+            <td>{{ formatPct(l.data1Percentual) }}</td>
+            <td>{{ formatCusto(l.data1Custo) }}</td>
+            <td>{{ formatPct(l.data2Percentual) }}</td>
+            <td>{{ formatCusto(l.data2Custo) }}</td>
+          </tr>
+          <!-- Linha de categoria -->
+          <tr *ngIf="isCategoria(l)" class="row-categoria">
+            <td [attr.colspan]="5" class="td-descricao"><strong>{{ l.item }}</strong> {{ l.descricao }}</td>
+            <td class="num"><strong>{{ formatBr(l.custoDiretoTotal) }}</strong></td>
+            <td [attr.colspan]="4"></td>
+          </tr>
+          <!-- Total geral -->
+          <tr *ngIf="isTotal(l)" class="row-total">
+            <td [attr.colspan]="5" class="td-descricao"><strong>{{ l.descricao }}</strong></td>
+            <td class="num"><strong>{{ formatBr(l.custoDiretoTotal) }}</strong></td>
+            <td class="num-empty"></td>
+            <td class="num"><strong>{{ formatBr(l.data1Custo) }}</strong></td>
+            <td class="num-empty"></td>
+            <td class="num"><strong>{{ formatBr(l.data2Custo) }}</strong></td>
+          </tr>
+          <!-- Percentual total -->
+          <tr *ngIf="isPercentual(l)" class="row-percentual">
+            <td [attr.colspan]="5" class="td-descricao"><strong>{{ l.descricao }}</strong></td>
+            <td class="num-empty"></td>
+            <td class="num"><strong>{{ formatPct(l.data1Percentual) }}</strong></td>
+            <td class="num-empty"></td>
+            <td class="num"><strong>{{ formatPct(l.data2Percentual) }}</strong></td>
+            <td class="num-empty"></td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</section>

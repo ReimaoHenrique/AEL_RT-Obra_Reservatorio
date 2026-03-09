@@ -1,0 +1,289 @@
+{
+  "revisao": "01",
+  "dataRef1": "02/03/2026",
+  "dataRef2": "05/03/2026",
+  "linhas": [
+    {
+      "tipo": "categoria",
+      "item": "4.1.1",
+      "descricao": "CAIXA DE PASSAGEM E PASSEIO",
+      "custoDiretoTotal": 1183.10
+    },
+    {
+      "tipo": "item",
+      "item": "4.1.1.2",
+      "descricao": "CAIXA DE PASSAGEM COM ENTRONCAMENTO DA TUBULAÇÃO DE 300MM COM TAMPA",
+      "und": "Und.",
+      "qtd": 1,
+      "valorUnitario": 303.98,
+      "custoDiretoTotal": 661.12,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "item",
+      "item": "4.1.1.4",
+      "descricao": "RECOMPOSIÇÃO DE PASSEIO",
+      "und": "m2",
+      "qtd": 2,
+      "valorUnitario": 120,
+      "custoDiretoTotal": 521.98,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "categoria",
+      "item": "4.1.2",
+      "descricao": "CAIXA E TUBULAÇÃO",
+      "custoDiretoTotal": 30851.52
+    },
+    {
+      "tipo": "item",
+      "item": "4.1.2.2",
+      "descricao": "TUBULAÇÃO PVC Ø300MM",
+      "und": "m",
+      "qtd": 15,
+      "valorUnitario": 485.33,
+      "custoDiretoTotal": 15833.15,
+      "data1Percentual": 90,
+      "data1Custo": 14249.83,
+      "data2Percentual": 100,
+      "data2Custo": 14249.83
+    },
+    {
+      "tipo": "item",
+      "item": "4.1.2.4",
+      "descricao": "BOTA FORA DE MATERIAL EXCEDENTE",
+      "und": "m3",
+      "qtd": 17.1,
+      "valorUnitario": 150,
+      "custoDiretoTotal": 5578.63,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 100,
+      "data2Custo": 5578.63
+    },
+    {
+      "tipo": "categoria",
+      "item": "4.2",
+      "descricao": "DRENAGEM CURVA ACESSO INFLAVEL",
+      "custoDiretoTotal": 59255.81
+    },
+    {
+      "tipo": "item",
+      "item": "4.2.2",
+      "descricao": "BLOQUEIO DE BOCA DE LOBO COM MEIO FIO",
+      "und": "m",
+      "qtd": 5,
+      "valorUnitario": 200,
+      "custoDiretoTotal": 2174.90,
+      "data1Percentual": 100,
+      "data1Custo": 2174.90,
+      "data2Percentual": 100,
+      "data2Custo": 2174.90
+    },
+    {
+      "tipo": "item",
+      "item": "4.2.4",
+      "descricao": "REMOÇÃO DE MEIA CANA EXISTENTE",
+      "und": "m",
+      "qtd": 35,
+      "valorUnitario": 50,
+      "custoDiretoTotal": 3806.08,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 100,
+      "data2Custo": 3806.08
+    },
+    {
+      "tipo": "item",
+      "item": "4.2.6",
+      "descricao": "BOTA FORA DE MATERIAL EXCEDENTE",
+      "und": "m3",
+      "qtd": 1.52,
+      "valorUnitario": 150,
+      "custoDiretoTotal": 497.05,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 100,
+      "data2Custo": 497.05
+    },
+    {
+      "tipo": "categoria",
+      "item": "4.3",
+      "descricao": "MELHORIAS DE DRENAGEM NO DESVIO FERROVIARIO",
+      "custoDiretoTotal": 116794.58
+    },
+    {
+      "tipo": "item",
+      "item": "4.3.2",
+      "descricao": "INSTALAÇÃO DE BOMBA SUBMERSIVEL MSN 20CV 250M3/H 1",
+      "und": "Und.",
+      "qtd": 1,
+      "valorUnitario": 17750.83,
+      "custoDiretoTotal": 38606.33,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "item",
+      "item": "4.3.4",
+      "descricao": "ALVENARIA DE PROTEÇÃO",
+      "und": "m2",
+      "qtd": 24,
+      "valorUnitario": 180,
+      "custoDiretoTotal": 9395.58,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "categoria",
+      "item": "4.4",
+      "descricao": "DRENAGEM SUPERFOSFATO",
+      "custoDiretoTotal": 62114.78
+    },
+    {
+      "tipo": "item",
+      "item": "4.4.2",
+      "descricao": "CANALETA 01 - 0.2 X 0,45 - COM GRELHA",
+      "und": "m",
+      "qtd": 25,
+      "valorUnitario": 902.39,
+      "custoDiretoTotal": 49065.34,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "categoria",
+      "item": "4.5",
+      "descricao": "DRENAGEM INFLAVEIS DE MATERIA PRIMA",
+      "custoDiretoTotal": 525471.11
+    },
+    {
+      "tipo": "item",
+      "item": "4.5.2",
+      "descricao": "CAIXAS DE CONCRETO 2,0 X 2,0 X 1,50 M",
+      "und": "Und.",
+      "qtd": 2,
+      "valorUnitario": 15315.11,
+      "custoDiretoTotal": 66617.76,
+      "data1Percentual": 50,
+      "data1Custo": 33308.88,
+      "data2Percentual": 50,
+      "data2Custo": 33308.88
+    },
+    {
+      "tipo": "item",
+      "item": "4.5.4",
+      "descricao": "TUBULAÇÃO DE RECALQUE CX. 01-4\"",
+      "und": "m",
+      "qtd": 120,
+      "valorUnitario": 210.84,
+      "custoDiretoTotal": 55026.80,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "item",
+      "item": "4.5.6",
+      "descricao": "INSTALAÇÃO DE REGISTROS",
+      "und": "Und.",
+      "qtd": 2,
+      "valorUnitario": 7000,
+      "custoDiretoTotal": 30448.65,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "item",
+      "item": "4.5.8",
+      "descricao": "INSTALAÇÃO DE RAMAMAIS PARA IRRIGAÇÃO",
+      "und": "Und.",
+      "qtd": 10,
+      "valorUnitario": 500,
+      "custoDiretoTotal": 10874.52,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "categoria",
+      "item": "4.6",
+      "descricao": "RAMPA DO INFLAVEL",
+      "custoDiretoTotal": 34795.46
+    },
+    {
+      "tipo": "item",
+      "item": "4.6.2",
+      "descricao": "INSTALAÇÃO DE MEIO FIO",
+      "und": "m",
+      "qtd": 20,
+      "valorUnitario": 150,
+      "custoDiretoTotal": 6524.71,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "categoria",
+      "item": "4.7",
+      "descricao": "COBERTURA DO GERADOR",
+      "custoDiretoTotal": 38504.31
+    },
+    {
+      "tipo": "item",
+      "item": "4.7.2",
+      "descricao": "CONCRETO ARMADO 40MPA COM TELA DUPLA Q138",
+      "und": "m2",
+      "qtd": 16,
+      "valorUnitario": 250,
+      "custoDiretoTotal": 8699.61,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "item",
+      "item": "4.7.4",
+      "descricao": "COBERTURA COM TELHAS DE FIBROCIMENTO",
+      "und": "m2",
+      "qtd": 16,
+      "valorUnitario": 120,
+      "custoDiretoTotal": 4175.81,
+      "data1Percentual": 0,
+      "data1Custo": null,
+      "data2Percentual": 0,
+      "data2Custo": null
+    },
+    {
+      "tipo": "total",
+      "descricao": "Total Geral",
+      "custoDiretoTotal": 920000,
+      "data1Custo": 82567.42,
+      "data2Custo": 94875.06
+    },
+    {
+      "tipo": "percentual",
+      "descricao": "Percentual Total",
+      "data1Percentual": 8.97,
+      "data2Percentual": 10.31
+    }
+  ]
+}
